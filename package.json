@@ -1,0 +1,29 @@
+{
+  "name": "strider-worker-core",
+  "version": "0.0.0",
+  "description": "Just run those jobs. Decoupled from load balancing, joq queues, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Strider-CD/strider-worker-core.git"
+  },
+  "keywords": [
+    "strider",
+    "worker",
+    "testing",
+    "ci",
+    "continuous",
+    "deployment"
+  ],
+  "author": "Jared Forsyth <jared@jaredforsyth.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "chai": "~1.7.2",
+    "jshint": "~2.1.9",
+    "mocha": "~1.12.0"
+  }
+}
