@@ -1,5 +1,5 @@
 {
-  "name": "strider-worker-core",
+  "name": "strider-runner-core",
   "version": "0.0.0",
   "description": "Just run those jobs. Decoupled from load balancing, joq queues, etc.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Strider-CD/strider-worker-core.git"
+    "url": "https://github.com/Strider-CD/strider-runner-core.git"
   },
   "keywords": [
     "strider",
@@ -25,5 +25,8 @@
     "chai": "~1.7.2",
     "jshint": "~2.1.9",
     "mocha": "~1.12.0"
+  },
+  "dependencies": {
+    "mkdirp": "~0.3.5"
   }
 }
