@@ -24,7 +24,8 @@
   "devDependencies": {
     "chai": "~1.7.2",
     "jshint": "~2.1.9",
-    "mocha": "~1.12.0"
+    "mocha": "~1.12.0",
+    "expect.js": "~0.2.0"
   },
   "dependencies": {
     "mkdirp": "~0.3.5",
