@@ -14,15 +14,21 @@ describe('Integration', function () {
       deploy: false,
       cleanup: false
     }
+    function cachier(sub) {
+      return cachier
+    }
     process({
       id: '123',
-      type: 'TEST_AND_DEPLOY'
-    }, {
+      type: 'TEST_AND_DEPLOY',
+      ref: {
+        branch: 'master'
+      }
+    }, { // provider
       fetch: function (context, done) {
         called.fetch = true
         done()
       }
-    }, [{
+    }, [{ // jobplugins
       environment: function (context, done) {
         called.environment = true
         done(null, true)
@@ -43,8 +49,9 @@ describe('Integration', function () {
         called.cleanup = true
         done(null, true)
       }
-    }], {
+    }], { // config
       dataDir: '/tmp/',
+      cachier: cachier,
       io: new EventEmitter()
     }, function (err) {
       if (err) return done(err)
