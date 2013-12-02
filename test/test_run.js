@@ -12,7 +12,8 @@ describe('Integration', function () {
       prepare: false,
       test: false,
       deploy: false,
-      cleanup: false
+      cleanup: false,
+      listen: false
     }
     function cachier(sub) {
       return cachier
@@ -29,6 +30,9 @@ describe('Integration', function () {
         done()
       }
     }, [{ // jobplugins
+      listen: function () {
+        called.listen = true
+      },
       environment: function (context, done) {
         called.environment = true
         done(null, true)
