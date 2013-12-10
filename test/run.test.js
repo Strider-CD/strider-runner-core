@@ -1,24 +1,21 @@
-
-var expect = require('expect.js')
-  , process = require('../').process
-
+var processFn = require('../').process
   , EventEmitter = require('events').EventEmitter
 
 describe('Integration', function () {
   it('should just work', function (done) {
-    var called = {
-      fetch: false,
-      environment: false,
-      prepare: false,
-      test: false,
-      deploy: false,
-      cleanup: false,
-      listen: false
-    }
-    function cachier(sub) {
+    var called =
+      { fetch: false
+      , environment: false
+      , prepare: false
+      , test: false
+      , deploy: false
+      , cleanup: false
+      , listen: false
+      }
+    function cachier() {
       return cachier
     }
-    process({
+    processFn({
       id: '123',
       type: 'TEST_AND_DEPLOY',
       ref: {
