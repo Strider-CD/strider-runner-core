@@ -1,4 +1,4 @@
-var processFn = require('../').process
+var processBuildJob = require('../').process
   , EventEmitter = require('events').EventEmitter
 
 describe('Integration', function () {
@@ -15,7 +15,7 @@ describe('Integration', function () {
     function cachier() {
       return cachier
     }
-    processFn({
+    processBuildJob({
       id: '123',
       type: 'TEST_AND_DEPLOY',
       ref: {
