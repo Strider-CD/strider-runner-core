@@ -43,5 +43,19 @@ describe('utils', function () {
       })
     })
   })
+
+  describe('normalizeCmd', function () {
+    it('should process a string', function () {
+      var cmd = utils.normalizeCmd('ls -l -a')
+      expect(cmd.command).to.equal('ls')
+      expect(cmd.args).to.eql(['-l', '-a'])
+    })
+
+    it('should process a command and args', function () {
+      var cmd = utils.normalizeCmd({command: 'ls', args: ['-a']})
+      expect(cmd.command).to.equal('ls')
+      expect(cmd.args).to.eql(['-a'])
+    })
+  })
 })
 
