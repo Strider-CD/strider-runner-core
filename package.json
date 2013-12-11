@@ -4,7 +4,11 @@
   "description": "Just run those jobs. Decoupled from load balancing, joq queues, etc.",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "lint": "./node_modules/.bin/jshint .",
+    "pretest": "npm run-script lint",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
   },
   "repository": {
     "type": "git",
@@ -25,7 +29,8 @@
     "chai": "~1.7.2",
     "jshint": "~2.1.9",
     "mocha": "~1.12.0",
-    "expect.js": "~0.2.0"
+    "expect.js": "~0.2.0",
+    "istanbul": "~0.1.45"
   },
   "dependencies": {
     "mkdirp": "~0.3.5",
