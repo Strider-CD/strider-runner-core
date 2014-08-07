@@ -1,6 +1,6 @@
 {
   "name": "strider-runner-core",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "Just run those jobs. Decoupled from load balancing, joq queues, etc.",
   "main": "index.js",
   "scripts": {
