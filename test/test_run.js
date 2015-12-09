@@ -53,7 +53,8 @@ describe('Integration', function () {
     }], { // config
       dataDir: '/tmp/',
       cachier: cachier,
-      io: new EventEmitter()
+      io: new EventEmitter(),
+      branchConfig : { runner : { id : 'dummy' } }
     }, function (err) {
       if (err) return done(err)
       for (var name in called) {
