@@ -4,11 +4,11 @@
   "description": "Just run those jobs. Decoupled from load balancing, joq queues, etc.",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/jshint .",
+    "lint": "jshint .",
     "test-only": "mocha -R spec",
     "pretest": "npm run-script lint",
-    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec",
-    "posttest": "./node_modules/.bin/istanbul check-coverage",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec",
+    "posttest": "istanbul check-coverage",
     "prepublish": "npm test && npm prune"
   },
   "repository": {
@@ -27,11 +27,11 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "chai": "~1.7.2",
-    "jshint": "~2.1.9",
-    "mocha": "~1.12.0",
-    "expect.js": "~0.2.0",
-    "istanbul": "~0.1.45"
+    "chai": "~3.5.0",
+    "jshint": "~2.9.2",
+    "mocha": "~2.5.3",
+    "expect.js": "~0.3.1",
+    "istanbul": "~0.4.3"
   },
   "dependencies": {
     "mkdirp": "~0.3.5",
