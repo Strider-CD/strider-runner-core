@@ -1,27 +1,32 @@
-var expect = require('expect.js')
-  , EventEmitter = require('events').EventEmitter
-  , Job = require('../').Job
+var expect = require('expect.js');
+var EventEmitter = require('events').EventEmitter;
+var Job = require('../').Job;
 
 describe('Job', function () {
-  var job
+  var job;
   describe('with no plugins', function () {
     beforeEach(function () {
       job = new Job(
-        { id: 'man'
+        {
+          id: 'man',
+          project: {
+            display_name: 'testing'
+          }
         },
-        { fetch: function (dest, userConfig, config, done) {
-          done(null)
-        }
-      }, [], {
-        io: new EventEmitter()
-      })
-    })
+        {
+          fetch: function (dest, userConfig, config, done) {
+            done(null);
+          }
+        }, [], {
+          io: new EventEmitter()
+        });
+    });
     it('should fail', function (done) {
-      this.timeout(30)
+      this.timeout(30);
       job.run(function (err) {
-        expect(err.message).to.match(/plugin/)
-        done()
-      })
-    })
-  })
-})
+        expect(err.message).to.match(/plugin/);
+        done();
+      });
+    });
+  });
+});
