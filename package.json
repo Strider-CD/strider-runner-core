@@ -15,6 +15,9 @@
     "type": "git",
     "url": "https://github.com/Strider-CD/strider-runner-core.git"
   },
+  "engines": {
+    "node": ">=4.2"
+  },
   "keywords": [
     "strider",
     "worker",
