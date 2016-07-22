@@ -18,11 +18,14 @@ describe('Integration', function () {
     }
 
     processBuildJob({
-      id: '123',
+      _id: '123',
       project: {
         display_name: 'testing'
       },
       type: 'TEST_AND_DEPLOY',
+      trigger: {
+        type: 'manual'
+      },
       ref: {
         branch: 'master'
       }

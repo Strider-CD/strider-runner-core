@@ -8,9 +8,15 @@ describe('Job', function () {
     beforeEach(function () {
       job = new Job(
         {
-          id: 'man',
+          _id: 'man',
           project: {
             display_name: 'testing'
+          },
+          trigger: {
+            type: 'manual'
+          },
+          ref: {
+            branch: 'master'
           }
         },
         {
