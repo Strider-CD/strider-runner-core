@@ -1,5 +1,7 @@
 # strider-runner-core
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Strider-CD/strider-runner-core.svg)](https://greenkeeper.io/)
+
 Just run those jobs. Decoupled from load balancing, job queues, etc.
 
 [![Build Status](https://travis-ci.org/Strider-CD/strider-runner-core.svg?branch=master)](https://travis-ci.org/Strider-CD/strider-runner-core)
