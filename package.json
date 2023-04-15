@@ -34,7 +34,7 @@
     "eslint": "^4.19.1",
     "expect.js": "~0.3.1",
     "istanbul": "~0.4.3",
-    "mocha": "^5.2.0"
+    "mocha": "^10.2.0"
   },
   "dependencies": {
     "async": "~2.6.4",
